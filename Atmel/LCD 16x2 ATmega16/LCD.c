@@ -218,7 +218,7 @@ void lcdPuts(char *str) {
 /*
   Выводит строку из flash в позицию курсора.
 */
-void lcdPutsf(char *str) {
+void lcdPutsF(char *str) {
   while (pgm_read_byte(str)){
     while (lcdIsBusy()) ;
     
@@ -229,7 +229,7 @@ void lcdPutsf(char *str) {
 /*
   Выводит строку из eeprom в позицию курсора.
 */
-void lcdPutse(uint8_t *str) {
+void lcdPutsE(uint8_t *str) {
   while (eeprom_read_byte(str)){
     while (lcdIsBusy()) ;
     
