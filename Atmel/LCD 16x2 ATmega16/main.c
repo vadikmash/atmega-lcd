@@ -12,13 +12,28 @@ int main(void) {
   lcdSetCursor(LCD_CURSOR_OFF);
   
   char text[17];
-  strcpy(text, "  Hello World!  ");
-  lcdGotoXY(0, 0);
-  lcdPuts(text);
-  strcpy(text, "site:micro-pi.ru");
-  lcdGotoXY(1, 0);
-  lcdPuts(text);    
+  
+  while(1) {
+	  lcdClear();
+	  strcpy(text, "  Hello World!  ");
+	  lcdGotoXY(0, 0);
+	  lcdPuts(text);
+	  strcpy(text, "Vadim Mashnitski");
+	  lcdGotoXY(1, 0);
+	  lcdPuts(text);    
+  
+	  _delay_ms(2000);
+  
+	  lcdClear();
+	  lcdGotoXY(0, 0);
+	  
+	  strcpy(text, "Gets automate!");
 
-  while (1);
+	  lcdGotoXY(0, 0);
+	  lcdPuts(text);
+  
+	  _delay_ms(3000);
+  }
+  
 }
 

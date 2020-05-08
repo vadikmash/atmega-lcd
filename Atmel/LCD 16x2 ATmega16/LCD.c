@@ -127,12 +127,12 @@ void lcdRawSendByte(char byte, char state) {
   и 0x00, если нет.
 */
 char lcdIsBusy(void) {
-/* TODO
-  if (lcdRawGetByte(LCD_COMMAND) & (1<<7))
-    return 0xff;
-  else
-    return 0x00;
-*/
+
+  //if (lcdRawGetByte(LCD_COMMAND) & (1<<7))
+    //return 0xff;
+  //else
+    //return 0x00;
+
   _delay_ms(DELAY);
   return 0x00;
 }
@@ -218,7 +218,7 @@ void lcdPuts(char *str) {
 /*
   ¬ыводит строку из flash в позицию курсора.
 */
-void lcdPutsf(char *str) {
+void lcdPutsF(char *str) {
   while (pgm_read_byte(str)){
     while (lcdIsBusy()) ;
     
@@ -229,7 +229,7 @@ void lcdPutsf(char *str) {
 /*
   ¬ыводит строку из eeprom в позицию курсора.
 */
-void lcdPutse(uint8_t *str) {
+void lcdPutsE(uint8_t *str) {
   while (eeprom_read_byte(str)){
     while (lcdIsBusy()) ;
     
