@@ -127,12 +127,12 @@ void lcdRawSendByte(char byte, char state) {
   и 0x00, если нет.
 */
 char lcdIsBusy(void) {
-/* TODO
-  if (lcdRawGetByte(LCD_COMMAND) & (1<<7))
-    return 0xff;
-  else
-    return 0x00;
-*/
+
+  //if (lcdRawGetByte(LCD_COMMAND) & (1<<7))
+    //return 0xff;
+  //else
+    //return 0x00;
+
   _delay_ms(DELAY);
   return 0x00;
 }
