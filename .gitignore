@@ -1,0 +1,15 @@
+# compiled code
+
+*.o
+*.hex
+*.eep
+*.elf
+*lss
+*.d
+*.map
+*.srec
+
+# proteus 
+
+*.pdsbak
+*.DSN
