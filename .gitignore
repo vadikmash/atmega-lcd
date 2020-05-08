@@ -13,3 +13,7 @@
 
 *.pdsbak
 *.DSN
+
+# vscode
+
+/.vscode
