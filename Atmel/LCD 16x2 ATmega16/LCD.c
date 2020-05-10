@@ -246,7 +246,7 @@ void lcdLoadCharacter(char code, char *pattern) {
   lcdRawSendByte((code<<3) | 0b01000000, LCD_COMMAND);
   
   for (char i = 0; i <= 7; i++){
-    while (lcdIsBusy()) ;
+    while (lcdIsBusy());
         
     lcdRawSendByte(*pattern++, LCD_DATA);
   }
